@@ -12,12 +12,10 @@ default:
     @just --list
 
 # Import defined justfiles
-import 'tasks/check.just'
 import 'tasks/commit.just'
-import 'tasks/doc.just'
 import 'tasks/docker.just'
-import 'tasks/format.just'
-import 'tasks/install.just'
-import 'tasks/mlflow.just'
+import 'tasks/documentation.just'
+import 'tasks/init.just'
 import 'tasks/package.just'
-import 'tasks/project.just'
+import 'tasks/quality.just'
+import 'tasks/remove.just'
