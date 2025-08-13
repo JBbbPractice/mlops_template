@@ -1,0 +1,23 @@
+# Import environment variables from .env files in repo
+set dotenv-load := true
+
+# Define specific variables for just to use in the justfiles
+PACKAGE := "{{cookiecutter.package}}"
+REPOSITORY := "{{cookiecutter.repository}}"
+SOURCES := "src"
+TESTS := "tests"
+
+# Define default command when user types just in terminal
+default:
+    @just --list
+
+# Import defined justfiles
+import 'tasks/check.just'
+import 'tasks/commit.just'
+import 'tasks/doc.just'
+import 'tasks/docker.just'
+import 'tasks/format.just'
+import 'tasks/install.just'
+import 'tasks/mlflow.just'
+import 'tasks/package.just'
+import 'tasks/project.just'
