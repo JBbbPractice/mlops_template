@@ -30,15 +30,9 @@ repos:
       - id: bandit
         args: ["-c", "pyproject.toml"]
         additional_dependencies: ["bandit[toml]"]
-    # Enfore precommit
+    # Check commit msgs
   - repo: https://github.com/commitizen-tools/commitizen
     rev: 'v4.8.3' # Use a recent version
     hooks:
-      # Checks if the commit message follows the conventional format.
-      # This runs during the `commit-msg` stage.
       - id: commitizen
-      # This is useful to run during the `pre-push` stage.
-      - id: commitizen-branch
-        # Checks if the branch name is compliant (e.g., starts with a ticket number).
-
-        stages: [pre-push]
+     
