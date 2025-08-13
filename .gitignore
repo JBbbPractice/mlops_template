@@ -12,7 +12,6 @@
 
 # Editor
 /.idea/
-/.vscode/
 .ipynb_checkpoints/
 
 # Environs
