@@ -2,7 +2,7 @@
 [group('init')]
 init: init-project init-hook
 
-# Create venv, 
+# Create venv,
 [group('init')]
 init-project:
     uv sync --all-groups
