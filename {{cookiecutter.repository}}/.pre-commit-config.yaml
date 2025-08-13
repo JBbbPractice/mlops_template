@@ -1,0 +1,47 @@
+# Configure the pre-commit check to run before making a commit
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 'v5.0.0'
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: check-toml
+      - id: check-yaml
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: detect-private-key
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 'v0.12.8'
+    hooks:
+      - id: ruff # Linter
+      - id: ruff-format # Format
+    # Check spelling
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+    # Check yaml formatting
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.17.2
+    hooks:
+      - id: yamlfmt
+    # Find vunerabilities
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.8.6'
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
+    # Enfore precommit
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: 'v4.8.3' # Use a recent version
+    hooks:
+      # Checks if the commit message follows the conventional format.
+      # This runs during the `commit-msg` stage.
+      - id: commitizen
+      # Checks if the branch name is compliant (e.g., starts with a ticket number).
+      # This is useful to run during the `pre-push` stage.
+      - id: commitizen-branch
+        stages: [pre-push]

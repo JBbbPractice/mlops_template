@@ -1,0 +1,33 @@
+[project]
+name = "mlops-template"
+version = "0.1.0"
+description = "Template to ensure best practices for collaborative AI system development"
+readme = "README.md"
+requires-python = ">=3.13"
+
+# DEPENDENCIES
+
+[dependency-groups]
+dev = [
+    "commitizen",
+    "pre-commit",
+    "pytest",
+    "rust-just",
+    "cookiecutter"
+]
+
+# TOOLS
+
+[tool.uv]
+package = false
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
