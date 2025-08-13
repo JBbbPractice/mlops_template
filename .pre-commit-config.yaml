@@ -42,7 +42,8 @@ repos:
       # Checks if the commit message follows the conventional format.
       # This runs during the `commit-msg` stage.
       - id: commitizen
-      # Checks if the branch name is compliant (e.g., starts with a ticket number).
       # This is useful to run during the `pre-push` stage.
       - id: commitizen-branch
+        # Checks if the branch name is compliant (e.g., starts with a ticket number).
+
         stages: [pre-push]
