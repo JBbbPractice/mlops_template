@@ -6,12 +6,13 @@ repos:
       - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
-      - id: end-of-file-fixer
       - id: check-toml
       - id: check-yaml
+      - id: detect-private-key
+      - id: debug-statements
+      - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
-      - id: detect-private-key
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: 'v0.12.8'
     hooks:
