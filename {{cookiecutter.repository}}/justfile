@@ -12,10 +12,10 @@ default:
     @just --list
 
 # Import defined justfiles
-import 'automation/commit.just'
 import 'automation/docker.just'
-import 'automation/documentation.just'
+import 'automation/document.just'
 import 'automation/init.just'
 import 'automation/package.just'
 import 'automation/quality.just'
 import 'automation/remove.just'
+import 'automation/version.just'
