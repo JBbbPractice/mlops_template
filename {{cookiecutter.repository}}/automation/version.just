@@ -20,7 +20,7 @@ version-new-branch:
     #!/usr/bin/env bash
     set -euo pipefail
 
-    echo 
+    echo
     echo "Creating a new git branch based on current branch..."
     echo
     echo "Branch name rules:"
