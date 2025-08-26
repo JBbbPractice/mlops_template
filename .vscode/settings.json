@@ -5,7 +5,6 @@
         "**/__pycache__": true,
         "**/.pytest_cache": true,
         "**/.mypy_cache": true,
-        ".venv": true
     },
     "files.watcherExclude": {
         "**/.venv/**": true,
