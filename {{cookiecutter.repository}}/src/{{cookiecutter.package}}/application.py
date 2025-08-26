@@ -1,28 +1,19 @@
-# ACTUAL APPLICATION OR SYSTEM LOGIC
+"""
+Core application logic for the CLI.
+"""
+
 import typer
 
+app = typer.Typer()
 
+
+@app.command()
 def main(
-    input_path: str = typer.Argument(help="Input"),
-    output_dir: str = typer.Argument(help="Output directory"),
-    verbose: bool = typer.Option(
-        False, "--verbose", "-v", help="Verbosity of the output"
+    files: list[str] = typer.Argument(
+        None, help="Config files for the workflow (local path only)."
     ),
-):
-    """Workflow documentation"""
-    # Start workflow, include output when verbose
-    if verbose:
-        typer.echo(f"Processing {input_path}")
-
-    # ADD LOGIC
-
-    # End workflow, again include output when verbose
-    if verbose:
-        typer.echo("Workflow completed.")
-
+) -> int:
+    if len(files) == 0:
+        raise RuntimeError("No configs provided.")
+    # Add logic
     return 0
-
-
-# For optional cmd execution
-if __name__ == "__main__":
-    typer.run(main)
