@@ -2,6 +2,7 @@
 [group('version')]
 version-bump:
     uv run cz bump
+    git push --tags
 
 # Start commit process for staged changes
 [group('version')]
