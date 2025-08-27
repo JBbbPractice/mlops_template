@@ -1,3 +1,17 @@
+## v0.3.0 (2025-08-26)
+
+### Feat
+
+- **src**: module structure included
+
+### Fix
+
+- **repo**: resolved style issues
+
+### Refactor
+
+- **pre-commit**: removed some hooks
+
 ## v0.2.0 (2025-08-25)
 
 ### Feat
