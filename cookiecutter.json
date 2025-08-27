@@ -2,14 +2,7 @@
     "name": "Enter a fitting name",
     "repository": "{{cookiecutter.name.lower().replace(' ', '-')}}",
     "package": "{{cookiecutter.repository.replace('-', '_')}}",
-    "author": "Name of developer",
+    "author": "Name of developer (e.g. Team Analysis)",
     "description": "Write a short description of the future system",
-    "python_version": "e.g. 3.13",
-    "__prompts__": {
-        "user": "GitLab User",
-        "name": "Project Name",
-        "repository": "GitLab Repository",
-        "package": "Python Package",
-        "python_version": "Python Version"
-    }
+    "python_version": "e.g. 3.13"
 }

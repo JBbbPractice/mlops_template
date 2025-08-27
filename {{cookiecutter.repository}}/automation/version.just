@@ -3,9 +3,19 @@
 version-bump:
     uv run cz bump
 
-# Stage all current workspace changes and start commit process
+# Start commit process for staged changes
 [group('version')]
 version-commit:
+    uv run cz commit
+
+# Undo last commit not yet pushed to origin
+[group('version')]
+version-undo-commit:
+    git reset HEAD~
+
+# Stage all current workspace changes and start commit process
+[group('version')]
+version-stage-commit:
     git add .
     uv run cz commit
 
