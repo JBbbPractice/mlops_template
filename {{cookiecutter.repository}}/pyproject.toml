@@ -3,13 +3,10 @@
 [project]
 name = "{{cookiecutter.repository}}"
 description = "{{cookiecutter.description}}"
-authors = [{ name = "{{cookiecutter.user}}" }]
+authors = [{ name = "{{cookiecutter.author}}" }]
 readme = "README.md"
 requires-python = ">={{cookiecutter.python_version}}"
-dependencies = [
-    "hatchling>=1.27.0",
-    "mlflow>={{cookiecutter.mlflow_version}}",
-]
+dependencies = []
 
 # SCRIPTS
 
