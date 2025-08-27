@@ -2,6 +2,7 @@
 
 [project]
 name = "{{cookiecutter.repository}}"
+version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.description}}"
 authors = [{ name = "{{cookiecutter.author}}" }]
 readme = "README.md"

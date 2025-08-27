@@ -2,6 +2,7 @@
     "name": "Enter a fitting name",
     "repository": "{{cookiecutter.name.lower().replace(' ', '-')}}",
     "package": "{{cookiecutter.repository.replace('-', '_')}}",
+    "version": "0.1.0",
     "author": "Name of developer (e.g. Team Analysis)",
     "description": "Write a short description of the future system",
     "python_version": "e.g. 3.13"
