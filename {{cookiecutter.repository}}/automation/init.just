@@ -1,13 +1,13 @@
 # Run commands needed to initialize repo
 [group('init')]
-init: init-project init-hook
+init: init-project init-hooks
 
-# Create venv,
+# Create venv and install all dependencies (better to run group)
 [group('init')]
-init-project:
+init-project:    
     uv sync --all-groups
 
 # Install git hook for commits
-[group('install')]
-install-hooks:
+[group('init')]
+init-hooks:
     uv run pre-commit install --hook-type=commit-msg
