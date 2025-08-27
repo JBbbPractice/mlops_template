@@ -4,7 +4,7 @@ init: init-project init-hooks
 
 # Create venv and install all dependencies (better to run group)
 [group('init')]
-init-project:    
+init-project:
     uv sync --all-groups
 
 # Install git hook for commits
