@@ -1,3 +1,18 @@
+## v0.3.1 (2025-08-27)
+
+### Fix
+
+- **cc-template**: resolved style issue
+- **main**: resolved style issues
+- **cookiecutter-repo**: included configs and rewritten typer
+- **readme**: resolved style issue
+- **settings**: resolved style and check issues
+- **src**: added some missing files
+
+### Refactor
+
+- **repo**: fixed cc template and extended automation
+
 ## v0.3.0 (2025-08-26)
 
 ### Feat
