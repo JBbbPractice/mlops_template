@@ -1,3 +1,7 @@
+# Run most used versioning commands ()
+[group('version')]
+init: version-stage version-commit
+
 # Run when version/tag needs bumped after changes
 [group('version')]
 version-bump:
@@ -16,9 +20,8 @@ version-undo-commit:
 
 # Stage all current workspace changes and start commit process
 [group('version')]
-version-stage-commit:
+version-stage:
     git add .
-    uv run cz commit
 
 # Return commit information
 [group('version')]

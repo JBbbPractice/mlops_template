@@ -1,6 +1,6 @@
 # Use pdoc to create package documentation
 [group('document')]
-doc-build format="google" output="docs": clean-docs
+doc-build format="google" output="docs":
     {% raw %}uv run pdoc --docformat={{format}} --output-directory={{output}} {{SOURCES}}/{{PACKAGE}}{% endraw %}
 
 # Show documentation on local host
