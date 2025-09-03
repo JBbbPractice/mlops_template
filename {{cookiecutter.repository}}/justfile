@@ -14,7 +14,7 @@ default:
 # Import defined justfiles
 import 'automation/docker.just'
 import 'automation/document.just'
-import 'automation/init.just'
+import 'automation/initialize.just'
 import 'automation/package.just'
 import 'automation/quality.just'
 import 'automation/remove.just'
