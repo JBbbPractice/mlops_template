@@ -1,6 +1,6 @@
 # Run most used versioning commands ()
 [group('version')]
-init: version-stage version-commit
+version: version-stage version-commit
 
 # Run when version/tag needs bumped after changes
 [group('version')]
