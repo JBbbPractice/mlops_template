@@ -16,17 +16,9 @@ test:
     uv run pytest tests/
 
 # Add all changes to staging and commit with proper formatting
-add:
-    git add .
-
-commitregular:
-    git commit
-
 commit:
+    git add .
     uv run cz commit
-
-message:
-    git config commit.template .gitmessage
 
 # Create and push a new git branch
 new-branch:
