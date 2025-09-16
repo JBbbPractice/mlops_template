@@ -14,7 +14,8 @@ dev = [
     "pytest",
     "rust-just",
     "cookiecutter",
-    "typer"
+    "typer",
+    "trufflehog"
 ]
 
 # TOOLS

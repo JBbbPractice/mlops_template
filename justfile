@@ -15,8 +15,10 @@ test:
     uv run pytest tests/
 
 # Add all changes to staging and commit with proper formatting
-commit:
+add:
     git add .
+
+commit:
     uv run cz commit
 
 # Create and push a new git branch
