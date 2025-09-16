@@ -19,7 +19,10 @@ add:
     git add .
 
 commit:
-    uv run cz commit
+    git commit
+
+message:
+    git config commit.template .gitmessage
 
 # Create and push a new git branch
 new-branch:

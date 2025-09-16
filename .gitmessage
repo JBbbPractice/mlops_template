@@ -1,0 +1,29 @@
+# <type>(<scope>): <subject>
+# 
+# Example: feat(auth): add OAuth2 authentication
+#
+# TYPES:
+# feat     - new feature
+# fix      - bug fix  
+# docs     - documentation changes
+# style    - formatting, missing semi colons, etc
+# refactor - code change that neither fixes a bug nor adds a feature
+# test     - adding missing tests
+# chore    - maintain, dependencies, etc
+#
+# SCOPE:
+# See "modified:" below for staged changes, choose one word which best describes them
+#
+# Subject line rules:
+# - Use imperative mood ("add" not "added")
+# - No capital letter at start
+# - No period at the end
+# - 50 characters or less
+#
+# Body (optional):
+# - Wrap at 72 characters
+# - Explain what and why, not how
+#
+# Footer (optional):
+# - Reference issues: "Closes issue number .."
+# - Breaking changes: "BREAKING CHANGE: ..."
