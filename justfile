@@ -8,6 +8,7 @@ install:
 
 # Setup the pre-commit hooks
 hooks:
+    uv run pre-commit install --hook-type=pre-commit
     uv run pre-commit install --hook-type=commit-msg
 
 # Run the project component tests
