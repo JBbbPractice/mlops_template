@@ -19,8 +19,11 @@ test:
 add:
     git add .
 
-commit:
+commitregular:
     git commit
+
+commit:
+    uv run cz commit
 
 message:
     git config commit.template .gitmessage
