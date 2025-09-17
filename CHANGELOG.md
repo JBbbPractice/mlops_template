@@ -1,3 +1,40 @@
+## v0.4.0 (2025-09-17)
+
+### Feat
+
+- **commit**: optimized commit workflow
+- **security**: added trufflehog support
+
+### Fix
+
+- **precommit**: trufflehog works now
+- **just**: revert to old setup
+- **auto**: change just file
+- **gitmessage**: resolved endings and whitespace
+- **version**: change git automation
+- **precommit**: changed all commits to precommit
+- **precommit**: corrected trufflehog command
+- **precommit**: resolved style change in precommit config
+- **justfile**: resolved import issue
+- **automation**: Resolved some just fixes
+- **cc-template**: resolved style issue
+- **cookiecutter**: style aangepast
+- **workspace**: resolved style issues
+- **settings**: removed local added workspace
+- **settings**: resolved style issues
+- **settings**: removed venv excludes
+- **init.just**: resolved style issue
+- **automation**: resolved naming
+- **cc-template**: resolved style issues
+- **cc-template**: version is required
+- **cc-template**: resolved naming issue
+- **lock**: versioning
+- **versioning**: push tags
+
+### Refactor
+
+- **automation**: Changed groups and rewrite
+
 ## v0.3.1 (2025-08-27)
 
 ### Fix
