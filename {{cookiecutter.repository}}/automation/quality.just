@@ -1,6 +1,6 @@
 # Define behavior when full group is executed
 [group('quality')]
-quality: quality-code quality-type quality-format quality-security quality-coverage
+quality: quality-code quality-type quality-format quality-security quality-coverage quality-test
 
 # Run Ruff to check code quality and find issues
 [group('quality')]
@@ -21,6 +21,11 @@ quality-type:
 [group('quality')]
 quality-security:
     {% raw %}uv run bandit --recursive --configfile=pyproject.toml {{SOURCES}}{% endraw %}
+
+# Run Trufflehog to find secrets
+[group('quality')]
+quality-secrets:
+    {% raw %}uv run trufflehog filesystem .{% endraw %}
 
 # Use Pytest to execute component tests (requires test scripts)
 [group('quality')]

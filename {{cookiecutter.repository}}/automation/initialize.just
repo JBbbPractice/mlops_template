@@ -11,3 +11,4 @@ initialize-project:
 [group('initialize')]
 initialize-hooks:
     uv run pre-commit install --hook-type=commit-msg
+    uv run pre-commit install --hook-type=pre-commit

@@ -16,7 +16,7 @@ test:
     uv run pytest tests/
 
 # Add all changes to staging and commit with proper formatting
-commit:
+version:
     git add .
     uv run cz commit
 
