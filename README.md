@@ -58,9 +58,8 @@ Before getting started, ensure you have the following tools installed:
 cd /path/to/your/projects
 
 # Create new project from template
-uv run --with cookiecutter cookiecutter https://github.com/YOUR_USERNAME/mlops-template.git
+uv run --with cruft cruft create https://github.com/YOUR_USERNAME/TEMPLATE_REPO/
 
-# When prompted for delete & re-download, select 'Y'
 # Follow the interactive prompts to configure your project
 ```
 
