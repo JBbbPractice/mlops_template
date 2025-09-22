@@ -13,7 +13,7 @@ dev = [
     "pre-commit",
     "pytest",
     "rust-just",
-    "cookiecutter",
+    "copier",
     "typer"
 ]
 

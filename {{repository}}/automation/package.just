@@ -9,5 +9,11 @@ package-constraints constraints="constraints.txt":
 
 # Build package based on constraint snapshot, removes previous builds when available
 [group('package')]
-package-build constraints="constraints.txt": remove-build package-constraints
+package-build constraints="constraints.txt": package-build-clean package-constraints
 	{% raw %}uv build --build-constraint={{constraints}} --require-hashes --wheel{% endraw %}
+
+# Remove build folders
+[group('package')]
+package-build-clean:
+    rm -rf dist/
+    rm -rf build/

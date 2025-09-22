@@ -1,0 +1,31 @@
+# Template questions
+name:
+  type: str
+  help: Enter a fitting name
+
+repository:
+  type: str
+  help: Repository name (auto-generated from project name)
+  default: "[[name | lower | replace(' ', '-')]]"
+
+package:
+  type: str
+  help: Python package name (auto-generated from repository name)
+  default: "[[repository | replace('-', '_')]]"
+
+version:
+  type: str
+  help: Initial version number
+  default: "0.1.0"
+
+author:
+  type: str
+  help: Name of developer (e.g. Team Analysis)
+
+description:
+  type: str
+  help: Write a short description of the future system
+
+python_version:
+  type: str
+  help: Python version to use (e.g. 3.13)
