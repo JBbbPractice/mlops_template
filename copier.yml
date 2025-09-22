@@ -7,6 +7,8 @@ repository:
   help: Repository name (auto-generated from project name)
   default: "{{ name | lower | replace(' ', '-') }}"
 
+_subdirectory: "{{ repository }}"
+
 package:
   type: str
   help: Python package name (auto-generated from repository name)
