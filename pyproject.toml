@@ -1,6 +1,6 @@
 [project]
 name = "mlops-template"
-version = "0.4.0"
+version = "1.0.0"
 description = "Template to ensure best practices for collaborative AI system development"
 readme = "README.md"
 requires-python = ">=3.13"
