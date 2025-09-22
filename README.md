@@ -58,7 +58,7 @@ Before getting started, ensure you have the following tools installed:
 cd /path/to/your/projects
 
 # Create new project from template
-uv run --with cruft cruft create https://github.com/YOUR_USERNAME/TEMPLATE_REPO/
+uv run --with copier copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git path/to/destination
 
 # Follow the interactive prompts to configure your project
 ```
@@ -92,7 +92,7 @@ uv sync
 git init
 
 # Install pre-commit hooks and quality controls
-just initialize
+just setup
 
 # View available just commands
 just
@@ -150,7 +150,7 @@ just version-new-branch
 
 Run `just` to see all available commands. Common commands include:
 
-- `just initialize` - Set up pre-commit hooks and quality controls
+- `just setup` - Set up pre-commit hooks and quality controls
 - `just version` - Create semantic version commit
 - `just version-new-branch` - Create and setup new branch
 - `just quality` - Run test, linting, formatting and security checks
@@ -189,6 +189,7 @@ your_project/
 ├── tests/                          # Test files
 ├── .env.example                    # Environment file can be used during development, prefer the use of configs (Remove .example before use)
 ├── .pre-commit-config.yaml         # Pre commit hook configuration
+├── .copier-answers.yaml            # Template update configuration DO NOT EDIT!
 ├── your_project.code-workspace     # Preconfigured VSCode workspace settings
 ├── Dockerfile                      # Container image recipe
 ├── justfile                        # Main terminal command automation file, uses automation/ folder logic
