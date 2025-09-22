@@ -7,8 +7,6 @@ repository:
   help: Repository name (auto-generated from project name)
   default: "{{ name | lower | replace(' ', '-') }}"
 
-_subdirectory: "{{ repository }}"
-
 package:
   type: str
   help: Python package name (auto-generated from repository name)
@@ -30,3 +28,5 @@ description:
 python_version:
   type: str
   help: Python version to use (e.g. 3.13)
+
+_subdirectory: "temp"
