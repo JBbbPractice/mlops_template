@@ -11,6 +11,9 @@ hooks:
     uv run pre-commit install --hook-type=pre-commit
     uv run pre-commit install --hook-type=commit-msg
 
+hooks-remove:
+    uv run pre-commit uninstall
+
 # Run the project component tests
 test:
     uv run pytest tests/

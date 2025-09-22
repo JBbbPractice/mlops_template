@@ -1,3 +1,21 @@
+## v1.0.0 (2025-09-22)
+
+### BREAKING CHANGE
+
+- Changed from cookiecutter to copier due to update rollout issues
+
+### Feat
+
+- **template**: migrate copier
+
+### Fix
+
+- **template**: fix style issue
+- **copier**: resolve copier directory issue
+- **copier**: resolve function logic
+- **copier**: resolve style issues
+- **lock**: resolve lock change
+
 ## v0.4.0 (2025-09-17)
 
 ### Feat
