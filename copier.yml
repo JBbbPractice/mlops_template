@@ -5,12 +5,12 @@ name:
 repository:
   type: str
   help: Repository name (auto-generated from project name)
-  default: "{{ name.lower.replace(' ', '-') }}"
+  default: "{{ name | lower | replace(' ', '-') }}"
 
 package:
   type: str
   help: Python package name (auto-generated from repository name)
-  default: "{{ repository.replace('-', '_') }}"
+  default: "{{ repository | replace('-', '_') }}"
 
 version:
   type: str
