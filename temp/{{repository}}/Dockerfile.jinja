@@ -3,4 +3,6 @@ COPY dist/*.whl .
 RUN uv pip install --system *.whl
 RUN useradd -m app
 USER app
-CMD ["{{repository}}"]
+COPY config app/config.yml
+ENTRYPOINT [{{package}}]
+CMD ["/app/config.yml"]
