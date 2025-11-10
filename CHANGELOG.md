@@ -1,3 +1,10 @@
+## v1.0.1 (2025-11-10)
+
+### Fix
+
+- **automation**: docker style issue
+- **tests**: remove test temp
+
 ## v1.0.0 (2025-09-22)
 
 ### BREAKING CHANGE
