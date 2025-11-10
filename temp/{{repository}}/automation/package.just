@@ -14,8 +14,8 @@ package-build constraints="constraints.txt": remove-build package-constraints
 
 [group('package')]
 package-run-dev:
-	uvx --from dist/*.whl ecommerce config/scrape_dev.yml
+	uvx --from dist/*.whl ecommerce config/dev.yml
 
 [group('package')]
 package-run-prod:
-	uvx --from dist/*.whl ecommerce config/scrape_prod.yml
+	uvx --from dist/*.whl ecommerce config/prod.yml

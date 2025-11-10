@@ -37,6 +37,7 @@ Before getting started, ensure you have the following tools installed:
 | **uv**            | Python package manager     | [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/) |
 | **Git with Bash** | Version control & terminal | [Git Downloads](https://git-scm.com/downloads)                                   |
 | **Trufflehog**    | Security scanning          | [Trufflehog Repository](https://github.com/trufflesecurity/trufflehog)           |
+| **Trivy**         | Security scanning          | [Trivy Repository](https://trivy.dev/docs/latest/)                               |
 
 ### Environment Setup
 
@@ -47,6 +48,7 @@ Before getting started, ensure you have the following tools installed:
    uv --version
    git --version
    trufflehog --version
+   trivy --version
    ```
 
 > ⚠️ **Important**: This template requires Bash terminal functionality. Windows users must use Git Bash or WSL.

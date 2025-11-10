@@ -16,3 +16,8 @@ docker-compose:
 [group('docker')]
 docker-run tag="latest":
     docker run --rm {{REPOSITORY}}:{{tag}}
+
+# Scan docker image for vulnerabilities
+[group('docker')]
+docker-scan tag="latest":
+    trivy image --scanners vuln,secret,misconfig {{REPOSITORY}}:{{tag}}
