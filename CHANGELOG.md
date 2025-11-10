@@ -1,3 +1,9 @@
+## v1.0.2 (2025-11-10)
+
+### Fix
+
+- **docker**: resolve style issue
+
 ## v1.0.1 (2025-11-10)
 
 ### Fix
