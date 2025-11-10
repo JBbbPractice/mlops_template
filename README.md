@@ -54,11 +54,8 @@ Before getting started, ensure you have the following tools installed:
 ## Quick Start
 
 ```bash
-# Navigate to your desired project directory
-cd /path/to/your/projects
-
 # Create new project from template
-uv run --with copier copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git path/to/destination
+uvx copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git path/to/destination
 
 # Follow the interactive prompts to configure your project
 ```

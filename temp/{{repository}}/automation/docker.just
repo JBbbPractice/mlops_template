@@ -5,7 +5,7 @@ docker: docker-build docker-run
 # Build docker image based on latest tag (see commit for bumping of tag)
 [group('docker')]
 docker-build tag="latest": package-build
-    {% raw %}docker build --tag={{REPOSITORY}}:{{tag}} .{% endraw %}
+    docker build --tag={{REPOSITORY}}:{{tag}} .
 
 # Run docker compose if using multiple related containers as a single application
 [group('docker')]
@@ -15,4 +15,4 @@ docker-compose:
 # Run latest docker image
 [group('docker')]
 docker-run tag="latest":
-    {% raw %}docker run --rm {{REPOSITORY}}:{{tag}}{% endraw %}
+    docker run --rm {{REPOSITORY}}:{{tag}}
