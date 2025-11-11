@@ -1,3 +1,10 @@
+## v1.0.4 (2025-11-11)
+
+### Fix
+
+- **template**: resolve template issue and add claude support
+- **lock**: resolve style issue lock
+
 ## v1.0.3 (2025-11-10)
 
 ### Fix
