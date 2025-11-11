@@ -16,7 +16,7 @@ repos:
     hooks:
       - id: codespell
 
-    # Find vunerabilities
+    # Find vulnerabilities
   - repo: https://github.com/PyCQA/bandit
     rev: "1.8.6"
     hooks:
