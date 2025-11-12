@@ -1,3 +1,9 @@
+## v1.2.1 (2025-11-12)
+
+### Refactor
+
+- **precommit**: removed redundant hooks
+
 ## v1.2.0 (2025-11-12)
 
 ### Feat
