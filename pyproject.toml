@@ -14,7 +14,8 @@ dev = [
     "pytest",
     "rust-just",
     "copier",
-    "typer"
+    "typer",
+    "pyyaml"
 ]
 
 # TOOLS
@@ -32,3 +33,10 @@ update_changelog_on_bump = true
 [tool.pytest.ini_options]
 log_cli = true
 log_cli_level = "INFO"
+markers = [
+    "fast: Fast tests that validate basic structure",
+    "quality: Tests that run quality gates on generated projects",
+    "slow: Slow tests that run full automation suite",
+    "automation: Tests for automation commands",
+    "parametrized: Tests with parameter variations",
+]

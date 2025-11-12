@@ -1,0 +1,53 @@
+# GitLab CI/CD pipeline for template testing
+
+default:
+  image: ghcr.io/astral-sh/uv:python3.13-bookworm
+
+stages:
+  - structure
+  - quality
+  - automation
+  - parameters
+
+# Fast structure validation - fails fast if basic generation is broken
+test:structure:
+  stage: structure
+  script:
+    - just test-template-quick
+  artifacts:
+    reports:
+      junit: test-results.xml
+    when: always
+
+# Quality gate validation - ensures generated projects pass quality checks
+test:quality:
+  stage: quality
+  script:
+    - uv run pytest tests/test_quality.py -v
+  needs: [test:structure]
+  artifacts:
+    reports:
+      junit: test-results.xml
+    when: always
+
+# Full automation validation - tests all Just commands work
+test:automation:
+  stage: automation
+  script:
+    - uv run pytest tests/test_automation.py -v
+  needs: [test:quality]
+  artifacts:
+    reports:
+      junit: test-results.xml
+    when: always
+
+# Parameter matrix - tests various configurations
+test:parameters:
+  stage: parameters
+  script:
+    - uv run pytest tests/test_parameters.py -v
+  needs: [test:structure]
+  artifacts:
+    reports:
+      junit: test-results.xml
+    when: always
