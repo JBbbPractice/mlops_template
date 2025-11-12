@@ -41,6 +41,7 @@ def test_core_files_exist(default_project: GeneratedProject):
         ".gitignore",
         ".pre-commit-config.yaml",
         ".env.example",
+        ".gitlab-ci.yml",
     ]
 
     for file_path in expected_files:
