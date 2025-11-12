@@ -1,8 +1,13 @@
-## Unreleased
+## v1.2.0 (2025-11-12)
 
 ### Feat
 
 - **ci-cd**: add GitLab CI/CD pipeline template for generated projects
+- **testing**: add comprehensive template testing framework
+
+### Refactor
+
+- **precommit**: removed redundanceis
 
 ## v1.1.0 (2025-11-12)
 
