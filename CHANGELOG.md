@@ -1,3 +1,9 @@
+## v1.2.2 (2025-11-12)
+
+### Refactor
+
+- **cicd**: optimize pipeline
+
 ## v1.2.1 (2025-11-12)
 
 ### Refactor
