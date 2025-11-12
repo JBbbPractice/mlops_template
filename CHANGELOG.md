@@ -1,3 +1,9 @@
+## v1.1.0 (2025-11-12)
+
+### Feat
+
+- **claude**: change claude instructions
+
 ## v1.0.4 (2025-11-11)
 
 ### Fix
