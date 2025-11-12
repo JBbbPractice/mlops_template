@@ -2,6 +2,8 @@
 
 default:
   image: ghcr.io/astral-sh/uv:python{{python_version}}-bookworm
+  before_script:
+    - uv sync --all-groups
 
 # Define when the pipeline runs
 workflow:
@@ -20,7 +22,6 @@ stages:
 tests-coverage:
   stage: tests-coverage
   script:
-    - uv sync --all-groups
     - just quality-test
     - just quality-coverage
   artifacts:
@@ -37,7 +38,6 @@ linting-formatting:
   stage: linting-formatting
   needs: [tests-coverage]
   script:
-    - uv sync --all-groups
     - just quality-code
     - just quality-format
 
@@ -46,7 +46,6 @@ type-checking:
   stage: type-checking
   needs: [linting-formatting]
   script:
-    - uv sync --all-groups
     - just quality-type
 
 # Stage 4: Security scanning
@@ -54,6 +53,5 @@ security:
   stage: security
   needs: [type-checking]
   script:
-    - uv sync --all-groups
     - just quality-security
     - just quality-secrets
