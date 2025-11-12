@@ -15,3 +15,60 @@ uv sync
 ```bash
 uv run {{package}}
 ```
+
+# CI/CD Pipeline
+
+This project includes a GitLab CI/CD pipeline that automatically validates code quality on merge requests and protected branches (`main` and `development`).
+
+## What Gets Checked
+
+The pipeline runs four sequential stages:
+
+1. **Tests & Coverage** - Runs the test suite and generates coverage reports
+2. **Linting & Formatting** - Validates code quality and formatting with Ruff
+3. **Type Checking** - Performs static type analysis with Pyrefly
+4. **Security** - Scans for vulnerabilities (Bandit) and leaked secrets (Trufflehog)
+
+## When It Runs
+
+The pipeline triggers automatically on:
+- All merge requests
+- Pushes to `main` branch
+- Pushes to `development` branch
+
+Feature branch pushes do not trigger the pipeline to conserve runner resources.
+
+## Running Checks Locally
+
+Before opening a merge request, run the full quality suite locally:
+
+```bash
+just quality
+```
+
+Or run individual checks:
+
+```bash
+just quality-test          # Run tests
+just quality-coverage      # Generate coverage report
+just quality-code          # Lint code
+just quality-format        # Check formatting
+just quality-type          # Type checking
+just quality-security      # Scan for vulnerabilities
+just quality-secrets       # Scan for secrets
+```
+
+## Interpreting Failures
+
+If the pipeline fails:
+
+1. Check which stage failed in the GitLab UI
+2. Review the job logs for specific errors
+3. Run the corresponding `just quality-*` command locally to reproduce the issue
+4. Fix the issues and push again
+
+The pipeline stops at the first failure, so you'll need to fix each stage sequentially.
+
+## Artifacts
+
+Test results and coverage reports are saved as GitLab artifacts for 30 days and can be viewed in the merge request UI.

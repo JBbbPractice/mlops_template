@@ -1,3 +1,9 @@
+## Unreleased
+
+### Feat
+
+- **ci-cd**: add GitLab CI/CD pipeline template for generated projects
+
 ## v1.1.0 (2025-11-12)
 
 ### Feat

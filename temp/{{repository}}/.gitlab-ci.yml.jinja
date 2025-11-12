@@ -1,0 +1,59 @@
+# GitLab CI/CD pipeline for quality checks
+
+default:
+  image: ghcr.io/astral-sh/uv:python{{python_version}}-bookworm
+
+# Define when the pipeline runs
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "development"
+
+stages:
+  - tests-coverage
+  - linting-formatting
+  - type-checking
+  - security
+
+# Stage 1: Run tests and generate coverage reports
+tests-coverage:
+  stage: tests-coverage
+  script:
+    - uv sync --all-groups
+    - just quality-test
+    - just quality-coverage
+  artifacts:
+    reports:
+      junit: test-results.xml
+    paths:
+      - htmlcov/
+      - .coverage
+    when: always
+    expire_in: 30 days
+
+# Stage 2: Lint and format checking
+linting-formatting:
+  stage: linting-formatting
+  needs: [tests-coverage]
+  script:
+    - uv sync --all-groups
+    - just quality-code
+    - just quality-format
+
+# Stage 3: Static type checking
+type-checking:
+  stage: type-checking
+  needs: [linting-formatting]
+  script:
+    - uv sync --all-groups
+    - just quality-type
+
+# Stage 4: Security scanning
+security:
+  stage: security
+  needs: [type-checking]
+  script:
+    - uv sync --all-groups
+    - just quality-security
+    - just quality-secrets
