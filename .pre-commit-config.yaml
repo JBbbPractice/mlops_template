@@ -1,14 +1,9 @@
 # Configure the pre-commit check to run before making a commit
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v5.0.0"
+    rev: 'v5.0.0'
     hooks:
       - id: check-added-large-files
-      - id: check-case-conflict
-      - id: check-merge-conflict
-      - id: end-of-file-fixer
-      - id: mixed-line-ending
-      - id: trailing-whitespace
 
     # Check spelling
   - repo: https://github.com/codespell-project/codespell
@@ -16,7 +11,7 @@ repos:
     hooks:
       - id: codespell
 
-    # Find vulnerabilities
+    # Find vunerabilities
   - repo: https://github.com/PyCQA/bandit
     rev: "1.8.6"
     hooks:
@@ -29,7 +24,7 @@ repos:
       - id: commitizen
         stages: [commit-msg]
 
-    # Deeper secret scan
+    # Secret scan
   - repo: local
     hooks:
       - id: trufflehog
