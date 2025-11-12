@@ -18,6 +18,22 @@ hooks-remove:
 test:
     uv run pytest tests/
 
+# Test template - fast structural validation only
+test-template-quick:
+    uv run pytest tests/ -m fast -v
+
+# Test template - structure + quality checks
+test-template:
+    uv run pytest tests/ -m "fast or quality" -v
+
+# Test template - comprehensive (all layers including slow tests)
+test-template-full:
+    uv run pytest tests/ -v
+
+# Test template - specific markers
+test-template-mark MARKER:
+    uv run pytest tests/ -m {{MARKER}} -v
+
 # Add all changes to staging and commit with proper formatting
 version:
     git add .

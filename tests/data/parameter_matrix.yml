@@ -1,0 +1,49 @@
+# Parameter matrix for testing template with different configurations
+
+# Quick tier - minimal combinations for fast feedback
+quick:
+  - name: "test-project"
+    version: "0.1.0"
+    author: "Test Author"
+    description: "Test project"
+    python_version: "3.13"
+
+# Standard tier - realistic variations
+standard:
+  - name: "my-ml-app"
+    version: "1.0.0"
+    author: "Data Team"
+    description: "Production ML application"
+    python_version: "3.13"
+
+  - name: "analytics-pipeline"
+    version: "0.2.0"
+    author: "Analytics"
+    description: "Data analytics pipeline"
+    python_version: "3.12"
+
+  - name: "model-service"
+    version: "2.1.0"
+    author: "ML Platform"
+    description: "Model serving microservice"
+    python_version: "3.11"
+
+# Edge cases - boundary conditions and special characters
+edge_cases:
+  - name: "a"
+    version: "0.0.1"
+    author: "X"
+    description: "Minimal project"
+    python_version: "3.11"
+
+  - name: "my-app-v2"
+    version: "1.0.0"
+    author: "Team-Name"
+    description: "App with special-chars_and.dots"
+    python_version: "3.13"
+
+  - name: "very-long-project-name-that-tests-limits"
+    version: "0.1.0"
+    author: "Very Long Author Name That Tests Character Limits"
+    description: "A very long description that tests how the template handles lengthy text in various places throughout the generated project files and configuration"
+    python_version: "3.13"
