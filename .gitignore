@@ -13,6 +13,7 @@
 # Editor
 /.idea/
 .ipynb_checkpoints/
+/.vscode/
 
 # Environs
 .env
