@@ -20,7 +20,7 @@ A comprehensive MLOps template for developing production-ready AI systems with P
 - 🔧 Pre-configured development environment with VSCode workspace
 - 🧪 Testing framework setup
 - 📝 Automated code formatting and linting
-- 🔒 Security scanning with Trufflehog
+- 🔒 Security scanning with Trufflehog and Bandit
 - 📊 Logging and monitoring foundations
 - 🏷️ Semantic versioning with conventional commits
 - 🌿 Git workflow with protected branches
@@ -53,7 +53,9 @@ Before getting started, ensure you have the following tools installed:
 
 > ⚠️ **Important**: This template requires Bash terminal functionality. Windows users must use Git Bash or WSL.
 
-## Quick Start
+## Detailed Setup
+
+### 1. Project Generation
 
 ```bash
 # Create new project from template
@@ -62,9 +64,7 @@ uvx copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git path/to/desti
 # Follow the interactive prompts to configure your project
 ```
 
-## Detailed Setup
-
-### 1. Project Initialization
+### 2. Project Initialization
 
 ```bash
 # Open the newly created project folder in VSCode
@@ -74,7 +74,7 @@ code your-project-name
 # File → Open Workspace from File → select `your-project.code-workspace`
 ```
 
-### 2. Environment Setup
+### 3. Environment Setup
 
 ```bash
 # Install dependencies and create virtual environment
@@ -84,20 +84,20 @@ uv sync
 # If no prompt appears: Ctrl+Shift+P → "Python: Select Interpreter" → Choose .venv/python
 ```
 
-### 3. Initialize Version Control
+### 4. Initialize Version Control
 
 ```bash
 # Initialize git repository
 git init
 
-# Install pre-commit hooks and quality controls
+# Install pre-commit hooks and quality controls (Make sure your local virtual environment is activated!)
 just setup
 
 # View available just commands
 just
 ```
 
-### 4. First Commit
+### 5. First Commit
 
 ```bash
 # Create your first commit using semantic versioning
