@@ -13,7 +13,6 @@
 # Editor
 /.idea/
 .ipynb_checkpoints/
-/.continue
 
 # Environs
 .env
