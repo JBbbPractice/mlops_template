@@ -55,13 +55,26 @@ Before getting started, ensure you have the following tools installed:
 
 ## Detailed Setup
 
-### 1. Project Generation
+### 1a. Project Generation in current folder
+
+```bash
+# Move to the folder where your project folder should be created
+cd /path/to/projects
+
+# Create new project from template
+uvx copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git 
+
+# Follow the interactive prompts to configure your project
+```
+
+### 1b. Project Generation to folder of your choice
 
 ```bash
 # Create new project from template
-uvx copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git path/to/destination
+uvx copier copy https://github.com/YOUR_USERNAME/TEMPLATE_REPO.git /path/to/projects/folder
 
 # Follow the interactive prompts to configure your project
+# IMPORTANT - When /path/to/projects/folder already contains a folder with the intended repo name, a duplicate folder will be created.
 ```
 
 ### 2. Project Initialization
